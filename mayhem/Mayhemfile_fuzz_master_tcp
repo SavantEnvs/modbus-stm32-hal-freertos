@@ -1,0 +1,9 @@
+project: savantenvs/modbus-stm32-hal-freertos
+target: fuzz_master_tcp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_master_tcp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_master_tcp
+    libfuzzer: true
+    timeout: 60
